@@ -8,15 +8,23 @@ namespace BilletLib
 {
     public abstract class Køretøj
     {
+        #region instance fields
         public string nummerPlade { get; set; }
         public DateTime Dato { get; set; }
-        public Køretøj()
+        public bool bizz = false;
+        public double weekendRabat = 0.20;
+        #endregion
+
+        public Køretøj(string np)
         {
+            this.nummerPlade = np;
+            this.bizz = false;
         }
 
         public abstract int Pris();
         public abstract string KøretøjsType();
 
+        #region nummerplade
         public int TælINummerplade()
         {
             int countChar = nummerPlade.Count();
@@ -34,5 +42,7 @@ namespace BilletLib
                 throw new ArgumentException("Du har glemt at indtaste en nummerplade!");
             }
         }
+        #endregion
     }
+
 }

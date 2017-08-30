@@ -10,6 +10,7 @@ namespace BilletLib
     {
         //public string nummerPlade { get; set; }
         //public DateTime Dato { get; set; }
+        public double bizzRabat = 0.05;
 
         public Bil()
         {
