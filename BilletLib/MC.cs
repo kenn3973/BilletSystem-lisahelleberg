@@ -11,6 +11,11 @@ namespace BilletLib
         public string nummerPlade { get; set; }
         public DateTime Dato { get; set; }
 
+        public MC()
+        {
+
+        }
+
         public int Pris()
         {
             return 125;
