@@ -8,13 +8,13 @@ namespace BilletLib
 {
     public class Bil : Køretøj
     {
-        public string nummerPlade { get; set; }
-        public DateTime Dato { get; set; }
+        //public string nummerPlade { get; set; }
+        //public DateTime Dato { get; set; }
 
         public Bil()
         {
-
         }
+
         public override int Pris()
         {
             return 240;

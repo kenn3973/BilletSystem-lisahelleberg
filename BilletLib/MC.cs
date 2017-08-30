@@ -8,8 +8,8 @@ namespace BilletLib
 {
     public class MC : Køretøj
     {
-        public string nummerPlade { get; set; }
-        public DateTime Dato { get; set; }
+        //public string nummerPlade { get; set; }
+        //public DateTime Dato { get; set; }
 
         public MC()
         {
