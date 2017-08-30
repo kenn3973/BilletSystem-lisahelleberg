@@ -8,5 +8,28 @@ using System.Threading.Tasks;
 
 namespace BilletLib.Tests
 {
-    
+    [TestClass()]
+    public class BilTests
+    {
+        // arrange
+        Bil testBil = new Bil();
+
+        [TestMethod()]
+        public void PrisTest240()
+        {
+            // act
+            int pris = testBil.Pris();
+            // assert
+            Assert.AreEqual(240, pris);
+        }
+
+        [TestMethod()]
+        public void KøretøjTest()
+        {
+            // act
+            string type = testBil.Køretøj();
+            // assert
+            Assert.AreEqual("Bil", type);
+        }
+    }
 }
