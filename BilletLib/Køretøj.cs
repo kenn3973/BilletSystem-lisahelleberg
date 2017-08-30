@@ -10,10 +10,8 @@ namespace BilletLib
     {
         public string nummerPlade { get; set; }
         public DateTime Dato { get; set; }
-
         public Køretøj()
         {
-
         }
 
         public abstract int Pris();
