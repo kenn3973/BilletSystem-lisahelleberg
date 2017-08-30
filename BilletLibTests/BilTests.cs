@@ -24,7 +24,7 @@ namespace BilletLib.Tests
         }
 
         [TestMethod()]
-        public void KøretøjTest()
+        public void KøretøjTestBil()
         {
             // act
             string type = testBil.Køretøj();
