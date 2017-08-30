@@ -27,7 +27,7 @@ namespace BilletLib.Tests
         public void KøretøjTestMC()
         {
             // act
-            string type = testMC.Køretøj();
+            string type = testMC.KøretøjsType();
             // assert
             Assert.AreEqual("MC", type);
         }
