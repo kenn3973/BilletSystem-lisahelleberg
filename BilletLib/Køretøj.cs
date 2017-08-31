@@ -29,7 +29,7 @@ namespace BilletLib
         {
             if (bizz)
             {
-                double nyPris = Pris() - (Pris() * 0.05);
+                double nyPris = Pris() - (Pris() * bizzrabat);
                 //nyPris = nyPris * 5;
                 return nyPris;
                 //return Pris() - nyPris;

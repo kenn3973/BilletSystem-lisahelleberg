@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace BilletLib.Tests
 {
+    /// <summary>
+    /// Denne klasse tester på metoder som har noget at gøre direkte med bil-klassen
+    /// </summary>
     [TestClass()]
     public class BilTests
     {
@@ -55,6 +58,22 @@ namespace BilletLib.Tests
             double rabat = test.BroBizzRabat();
             // assert
             Assert.AreEqual(228, rabat);
+        }
+
+        /// <summary>
+        /// Denne test sikrer at en bil 
+        /// </summary>
+        [TestMethod()]
+        public void WeekendRabatBilTestYesYes()
+        {
+            // arrange 
+            var test = new Bil();
+            test.bizz = true;
+            test.weekDay = 6;
+            // act
+            double weekend = test.WeekendRabatBil();
+            // assert
+            Assert.AreEqual(192, weekend);
         }
     }
 }

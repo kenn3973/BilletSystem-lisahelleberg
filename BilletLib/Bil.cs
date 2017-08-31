@@ -33,7 +33,7 @@ namespace BilletLib
             {
                 if (weekDay == 6 || weekDay == 7)
                 {
-                    double nyPris = Pris()-(Pris() * 0.20);
+                    double nyPris = Pris()-(Pris() * weekendRabat);
                     return nyPris;
                 }
                 else

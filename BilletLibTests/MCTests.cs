@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace BilletLib.Tests
 {
+    /// <summary>
+    /// Denne klasse tester på metoder som har noget at gøre direkte med MC-klassen
+    /// </summary>
     [TestClass()]
     public class MCTests
     {
