@@ -11,6 +11,7 @@ namespace BilletLib
         //public string nummerPlade { get; set; }
         //public DateTime Dato { get; set; }
         public double weekendRabat = 0.20;
+        public int weekDay { get; set; }
 
         public Bil()
         {
@@ -24,6 +25,25 @@ namespace BilletLib
         public override string KøretøjsType()
         {
             return "Bil";
+        }
+
+        public double WeekendRabatBil()
+        {
+            if(bizz)
+            {
+                if (weekDay == 6 || weekDay == 7)
+                {
+                    double nyPris = Pris()-(Pris() * 0.20);
+                    return nyPris;
+                }
+                else
+                    return BroBizzRabat();
+            }
+            else
+            {
+                return Pris();
+            }
+            
         }
     }
     
