@@ -31,5 +31,29 @@ namespace BilletLib.Tests
             // assert
             Assert.AreEqual("MC", type);
         }
+
+        [TestMethod()]
+        public void BroBizzRabatTestNo()
+        {
+            // arrange 
+            var test = new MC();
+            test.bizz = false;
+            // act
+            double rabat = test.BroBizzRabat();
+            // assert
+            Assert.AreEqual(125, rabat);
+        }
+
+        [TestMethod()]
+        public void BroBizzRabatYes()
+        {
+            // arrange
+            var test = new MC();
+            test.bizz = true;
+            // act
+            double rabat = test.BroBizzRabat();
+            // assert
+            Assert.AreEqual(118.75, rabat);
+        }
     }
 }

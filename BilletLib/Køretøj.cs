@@ -10,7 +10,7 @@ namespace BilletLib
     {
         #region instance fields
         public string nummerPlade { get; set; }
-        public DateTime Dato { get; set; }
+        //public DateTime Dato { get; set; }
         public bool bizz = false;
         public double bizzrabat = 0.05;
         #endregion
