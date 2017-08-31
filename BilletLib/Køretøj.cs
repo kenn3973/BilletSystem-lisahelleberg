@@ -12,15 +12,40 @@ namespace BilletLib
         public string nummerPlade { get; set; }
         public DateTime Dato { get; set; }
         public bool bizz = false;
-        public double weekendRabat = 0.20;
+        public double bizzrabat = 0.05;
         #endregion
 
-        public Køretøj(string np)
+        public Køretøj()
         {
-            this.nummerPlade = np;
             this.bizz = false;
         }
 
+        public bool GetBizz()
+        {
+            return bizz;
+        }
+
+        public double BroBizzRabat()
+        {
+            if (bizz)
+            {
+                double nyPris = Pris() - (Pris() * 0.05);
+                //nyPris = nyPris * 5;
+                return nyPris;
+                //return Pris() - nyPris;
+                //return Pris() / 100 * 5 - Pris();
+            }
+            else
+            {
+                return Pris();
+            }
+        }
+
+
+        //public DateTime GetDateNow()
+        //{
+        //    return DateTime;
+        //}
         public abstract int Pris();
         public abstract string KøretøjsType();
 

@@ -68,5 +68,42 @@ namespace BilletLib.Tests
             // act
             test.TestNummerplade();
         }
+
+        [TestMethod()]
+        public void GetBizzTestFalse()
+        {
+            // arrange
+            var test = new Bil();
+            // act
+            test.GetBizz();
+            // assert
+            Assert.IsFalse(false);
+        }
+
+        [TestMethod()]
+        public void GetBizzTestTrue()
+        {
+            // arrange
+            var test = new Bil();
+            test.bizz = true;
+            //act
+            test.GetBizz();
+            // assert
+            Assert.IsTrue(true);
+        }
+
+        [TestMethod()]
+        public void GetBizzTest()
+        {
+            // arrange
+            var test = new Bil();
+            test.bizz = true;
+            // act
+            test.GetBizz();
+            //// assert
+            //Assert.
+        }
+
+        
     }
 }
