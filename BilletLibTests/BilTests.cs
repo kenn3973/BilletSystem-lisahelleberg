@@ -17,6 +17,7 @@ namespace BilletLib.Tests
         // arrange
         Bil testBil = new Bil();
 
+        // Denne test sikrer at prisen bliver registreret korrekt
         [TestMethod()]
         public void PrisTest240()
         {
@@ -26,6 +27,7 @@ namespace BilletLib.Tests
             Assert.AreEqual(240, pris);
         }
 
+        // Denne test sikrer at køretøjet bliver rigtigt registreret
         [TestMethod()]
         public void KøretøjTestBil()
         {
@@ -35,6 +37,7 @@ namespace BilletLib.Tests
             Assert.AreEqual("Bil", type);
         }
 
+        // Denne test sikrer at en bil uden brobizz ikke får rabat
         [TestMethod()]
         public void BroBizzRabatTestNo()
         {
@@ -48,6 +51,7 @@ namespace BilletLib.Tests
 
         }
 
+        // Denne test sikrer at en bil med brobizz får brobizzrabat
         [TestMethod()]
         public void BroBizzRabatTestYes()
         {
@@ -60,11 +64,9 @@ namespace BilletLib.Tests
             Assert.AreEqual(228, rabat);
         }
 
-        /// <summary>
-        /// Denne test sikrer at en bil 
-        /// </summary>
+        // Denne test sikrer at en bil med brobizz får weekendrabat når den passerer broen om lørdagen
         [TestMethod()]
-        public void WeekendRabatBilTestYesYes()
+        public void WeekendRabatBilTestYes6()
         {
             // arrange 
             var test = new Bil();
@@ -74,6 +76,47 @@ namespace BilletLib.Tests
             double weekend = test.WeekendRabatBil();
             // assert
             Assert.AreEqual(192, weekend);
+        }
+
+        // Denne test sikrer at en bil med brobizz får rabat når den passerer broen om søndagen
+        [TestMethod()]
+        public void WeekendRabatBilTestYes7()
+        {
+            // arrange
+            var test = new Bil();
+            test.bizz = true;
+            test.weekDay = 7;
+            // act
+            double weekend = test.WeekendRabatBil();
+            // assert
+            Assert.AreEqual(192, weekend);
+        }
+
+        // Denne test sikrer at en bil med brobizz ikke får weekendrabat når den passerer broen en hverdag
+        [TestMethod()]
+        public void WeekendRabatBilTestYes5()
+        {
+            // arrange
+            var test = new Bil();
+            test.bizz = true;
+            test.weekDay = 5;
+            // act
+            double weekend = test.WeekendRabatBil();
+            // assert
+            Assert.AreEqual(228, weekend);
+        }
+
+        // Denne test sikrer at en bil uden brobizz ikke får weekendrabat, når den passerer broen i weekenden
+        [TestMethod()]
+        public void WeekendRabatBilTestNo6()
+        {
+            // arrange
+            var test = new Bil();
+            test.weekDay = 6;
+            // act
+            double weekend = test.WeekendRabatBil();
+            // assert
+            Assert.AreEqual(240, weekend);
         }
     }
 }

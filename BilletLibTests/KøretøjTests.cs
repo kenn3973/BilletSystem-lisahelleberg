@@ -14,7 +14,7 @@ namespace BilletLib.Tests
     [TestClass()]
     public class KøretøjTests
     {
-        #region Tests der omhandler nummepladen
+        #region Tests der omhandler nummerpladen
 
         // Denne test sikrer at metoden tæller det rigtige antal tal i nummerpladen, her 9 tal
         [TestMethod()]

@@ -17,6 +17,7 @@ namespace BilletLib.Tests
         // arrange
         MC testMC = new MC();
 
+        // Denne test sikrer at programmet returnerer den korrekte pris
         [TestMethod()]
         public void PrisTest125()
         {
@@ -26,6 +27,7 @@ namespace BilletLib.Tests
             Assert.AreEqual(125, pris);
         }
 
+        // Denne test sikrer at programmet registrerer det korrekte køretøj
         [TestMethod()]
         public void KøretøjTestMC()
         {
@@ -35,6 +37,7 @@ namespace BilletLib.Tests
             Assert.AreEqual("MC", type);
         }
 
+        // Denne test sikrer at en MC uden brobizz ikke får rabat
         [TestMethod()]
         public void BroBizzRabatTestNo()
         {
@@ -47,6 +50,7 @@ namespace BilletLib.Tests
             Assert.AreEqual(125, rabat);
         }
 
+        // Denne test sikrer at en MC med brobizz får rabat
         [TestMethod()]
         public void BroBizzRabatYes()
         {
