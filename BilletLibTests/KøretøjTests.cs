@@ -115,19 +115,73 @@ namespace BilletLib.Tests
             Assert.IsTrue(true);
         }
 
-        //[TestMethod()]
-        //public void GetBizzTest()
-        //{
-        //    // arrange
-        //    var test = new Bil();
-        //    test.bizz = true;
-        //    // act
-        //    test.GetBizz();
-        //    //// assert
-        //    //Assert.
-        //}
-
         #endregion
 
+        // Denne test sikrer at turen over broen bliver registreret
+        [TestMethod()]
+        public void PasserBroTest1Gang()
+        {
+            // arrange
+            var bil = new Bil();
+            bil.PasserBro();
+            // act
+            int ture = bil.GetAntalTureOverBro();
+            //assert
+            Assert.AreEqual(1, ture);
+        }
+
+        // Denne test sikrer at antallet af ture bliver rigtigt registeret over broen, her 3 ture
+        [TestMethod()]
+        public void GetAntalTureOverBroTest3Bil()
+        {
+            // arrange
+            var bil = new Bil();
+            bil.PasserBro();
+            bil.PasserBro();
+            bil.PasserBro();
+            // act
+            int ture = bil.GetAntalTureOverBro();
+            // assert
+            Assert.AreEqual(3, ture);
+        }
+
+        // Denne metode sikrer at turen bliver registreret hvis man kører MC
+        [TestMethod()]
+        public void GetAntalTureOverBroMC()
+        {
+            // arrage
+            var MC = new MC();
+            MC.PasserBro();
+            // act
+            int ture = MC.GetAntalTureOverBro();
+            // assert
+            Assert.AreEqual(1, ture);
+        }
+
+        // Denne test sikrer at turen bliver registreret hvis man køre over Øresund i bil
+        [TestMethod()]
+        public void GetAntalTureOverBroOresundBil()
+        {
+            // arrange
+            var oBil = new OreSundBil();
+            oBil.PasserBro();
+            // act
+            int ture = oBil.GetAntalTureOverBro();
+            // assert
+            Assert.AreEqual(1, ture);
+        }
+
+        // Denne test sikrer at turen bliver registreret hvis man kører over Øresund på MC
+        [TestMethod()]
+        public void GetAntalTureOverBroOresundMC()
+        {
+            // arrange
+            var oMC = new OreSundMC();
+            oMC.PasserBro();
+            // act
+            int ture = oMC.GetAntalTureOverBro();
+            // assert
+            Assert.AreEqual(1, ture);
+        }
     }
 }

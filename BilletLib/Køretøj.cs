@@ -13,11 +13,13 @@ namespace BilletLib
         //public DateTime Dato { get; set; }
         public bool bizz = false;
         public double bizzrabat = 0.05;
+        private int antalTure;
         #endregion
 
         public Køretøj()
         {
             this.bizz = false;
+            this.antalTure = 0;
         }
 
         public bool GetBizz()
@@ -48,6 +50,17 @@ namespace BilletLib
         //}
         public abstract int Pris();
         public abstract string KøretøjsType();
+
+        public void PasserBro()
+        {
+            antalTure = antalTure + 1;
+            //return antalTure;
+        }
+
+        public int GetAntalTureOverBro()
+        {
+            return antalTure;
+        }
 
         #region nummerplade
         public int TælINummerplade()
