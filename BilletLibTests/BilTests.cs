@@ -29,7 +29,7 @@ namespace BilletLib.Tests
 
         // Denne test sikrer at køretøjet bliver rigtigt registreret
         [TestMethod()]
-        public void KøretøjTestBil()
+        public void KøretøjsTypeTestBil()
         {
             // act
             string type = testBil.KøretøjsType();

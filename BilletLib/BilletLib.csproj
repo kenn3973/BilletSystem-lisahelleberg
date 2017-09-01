@@ -44,6 +44,7 @@
     <Compile Include="Køretøj.cs" />
     <Compile Include="MC.cs" />
     <Compile Include="OreSundBil.cs" />
+    <Compile Include="OreSundMC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

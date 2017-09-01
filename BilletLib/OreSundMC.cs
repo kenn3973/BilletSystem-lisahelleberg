@@ -6,32 +6,24 @@ using System.Threading.Tasks;
 
 namespace BilletLib
 {
-    public class OreSundBil : Køretøj
+    class OreSundMC : Køretøj
     {
-        public OreSundBil()
+        public OreSundMC()
         {
         }
         public override string KøretøjsType()
         {
-            return "Øresund Bil";
+            return "Øresund MC";
         }
 
         public override int Pris()
         {
-            return 410;
+            return 210;
         }
 
         public int BizzPris()
         {
-            return 161;
-        }
-
-        public int BroBizzRabatOresund()
-        {
-            if (bizz)
-                return BizzPris();
-            else
-                return Pris();
+            return 73;
         }
     }
 }
