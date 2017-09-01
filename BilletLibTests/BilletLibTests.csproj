@@ -55,6 +55,7 @@
     <Compile Include="KøretøjTests.cs" />
     <Compile Include="MCTests.cs" />
     <Compile Include="OreSundBilTests.cs" />
+    <Compile Include="OreSundMCTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

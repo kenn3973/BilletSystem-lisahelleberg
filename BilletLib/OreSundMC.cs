@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilletLib
 {
-    class OreSundMC : Køretøj
+    public class OreSundMC : Køretøj
     {
         public OreSundMC()
         {
@@ -24,6 +24,14 @@ namespace BilletLib
         public int BizzPris()
         {
             return 73;
+        }
+
+        public int BroBizzRabatOresund()
+        {
+            if (bizz)
+                return BizzPris();
+            else
+                return Pris();
         }
     }
 }

@@ -53,7 +53,6 @@ namespace BilletLib.Tests
             test.nummerPlade = "";
             // act
             test.TestNummerplade();
-
         }
 
         // Denne test sikrer at metoden sender en Exception til brugeren, hvis der er indtastet 0 eller færre tal i nummerpladen

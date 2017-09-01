@@ -14,7 +14,7 @@ namespace BilletLib.Tests
     [TestClass()]
     public class OreSundBilTests
     {
-        // Denne test sikrer at prisen bliver rigtigt registreret
+        // Denne test sikrer at køretøjet bliver rigtigt registreret
         [TestMethod()]
         public void KøretøjsTypeTest()
         {
@@ -26,22 +26,52 @@ namespace BilletLib.Tests
             Assert.AreEqual("Øresund Bil", type);
         }
 
+        // Denne test sikrer at prisen blive rigtigt registreret
         [TestMethod()]
-        public void PrisTest()
+        public void PrisTest410()
         {
-            Assert.Fail();
+            // arrange
+            OreSundBil bil = new OreSundBil();
+            // act
+            int pris = bil.Pris();
+            // assert
+            Assert.AreEqual(410, pris);
         }
 
+        // Denne test sikrer at prisen på brobizz bliver korrekt registreret
         [TestMethod()]
         public void BizzPrisTest()
         {
-            Assert.Fail();
+            // arrange
+            OreSundBil bil = new OreSundBil();
+            // act
+            int brobizzPris = bil.BizzPris();
+            // assert
+            Assert.AreEqual(161, brobizzPris);
         }
 
+        // Denne test sikrer at en bil med brobizz får den rigtige rabat
         [TestMethod()]
-        public void BroBizzRabatOresundTest()
+        public void BroBizzRabatOresundTestYes()
         {
-            Assert.Fail();
+            OreSundBil bil = new OreSundBil();
+            bil.bizz = true;
+            // act
+            int bizzPris = bil.BroBizzRabatOresund();
+            // assert
+            Assert.AreEqual(161, bizzPris);
+        }
+
+        // Denne test sikrer at en bil uden brobizz ikke får rabat
+        [TestMethod()]
+        public void BroBizzRabatOresundTestNo()
+        {
+            // arrange
+            OreSundBil bil = new OreSundBil();
+            // act
+            int bizzpris = bil.BroBizzRabatOresund();
+            // assert
+            Assert.AreEqual(410, bizzpris);
         }
     }
 }
