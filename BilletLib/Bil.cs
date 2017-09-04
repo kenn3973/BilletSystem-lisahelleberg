@@ -13,7 +13,7 @@ namespace BilletLib
         public double weekendRabat = 0.20;
         public int weekDay { get; set; }
 
-        public Bil()
+        public Bil() : base()
         {
         }
 

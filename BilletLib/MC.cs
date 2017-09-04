@@ -11,7 +11,7 @@ namespace BilletLib
         //public string nummerPlade { get; set; }
         //public DateTime Dato { get; set; }
 
-        public MC()
+        public MC() : base()
         {
 
         }

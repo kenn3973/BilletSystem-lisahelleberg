@@ -8,7 +8,7 @@ namespace BilletLib
 {
     public class OreSundMC : Køretøj
     {
-        public OreSundMC()
+        public OreSundMC() : base()
         {
         }
         public override string KøretøjsType()
