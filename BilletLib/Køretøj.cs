@@ -8,6 +8,11 @@ namespace BilletLib
 {
     public abstract class Køretøj
     {
+        /// <summary>
+        /// Lidt mangel på summaries på hvad metoderne implementere og hvad der testes.
+        /// God dækning på hvad der skulle testes.
+        /// </summary>
+
         #region instance fields
         public string nummerPlade { get; set; }
         //public DateTime Dato { get; set; }
